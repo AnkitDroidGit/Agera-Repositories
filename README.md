@@ -6,19 +6,19 @@ In [Hello World By Agera](https://github.com/AnkitDroidGit/Hello-World-By-Agera)
 
 In our [hello world code](https://github.com/AnkitDroidGit/Hello-World-By-Agera), you could replace 
 
-    `implements Observable, Supplier<String>, Receiver<String>` 
+    implements Observable, Supplier<String>, Receiver<String>
 
 with
   
-     `implements MutableRepository<String>`
+     implements MutableRepository<String>
   
   but Agera provides a Repository factory, so remove the `MyDataSupplier` class altogether and replace
   
-      `MyDataSupplier myDataSupplier = new MyDataSupplier();`
+      MyDataSupplier myDataSupplier = new MyDataSupplier();
   
   with 
   
-     `MutableRepository<String> mStringRepo = Repositories.mutableRepository("Initial value by Agera with Repository");`
+     MutableRepository<String> mStringRepo = Repositories.mutableRepository("Initial value by Agera with Repository");
   
   `mutableRepository()` creates a repository similar to our previous implementation, but that is thread-safe and has a more sophisticated update dispatcher, so let's use that from now on.
   
