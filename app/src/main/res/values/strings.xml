@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Agera-Repositories</string>
+    <string name="complex_repository_activity">Go to complex repository activity</string>
 </resources>

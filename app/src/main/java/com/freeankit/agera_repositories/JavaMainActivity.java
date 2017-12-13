@@ -1,9 +1,12 @@
 package com.freeankit.agera_repositories;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.agera.MutableRepository;
@@ -48,6 +51,9 @@ public class JavaMainActivity extends AppCompatActivity {
             Log.d("AGERA", mStringRepo.get());
             textView.setText(mStringRepo.get());
         };
+        Button button = findViewById(R.id.btn);
+        button.setVisibility(View.VISIBLE);
+        button.setOnClickListener(view -> startActivity(new Intent(JavaMainActivity.this, ComplexRepositoryActivity.class)));
     }
 
     @Override
