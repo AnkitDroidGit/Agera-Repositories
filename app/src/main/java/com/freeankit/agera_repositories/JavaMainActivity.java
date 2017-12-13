@@ -51,9 +51,6 @@ public class JavaMainActivity extends AppCompatActivity {
             Log.d("AGERA", mStringRepo.get());
             textView.setText(mStringRepo.get());
         };
-        Button button = findViewById(R.id.btn);
-        button.setVisibility(View.VISIBLE);
-        button.setOnClickListener(view -> startActivity(new Intent(JavaMainActivity.this, ComplexRepositoryActivity.class)));
     }
 
     @Override
